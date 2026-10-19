@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.exam2oop;
 
 /**
@@ -18,12 +14,12 @@ public class UrZokni {
     }
         
     public void mosas(int pluszPont) {
-        if(pluszPont >= 0){ // filtering negative numbers
+        if(pluszPont >= 0){ // filtering negative values
             tisztasagPont += pluszPont;
         }
         else{
             throw new IllegalArgumentException(
-                "Error: negative or null numbers not allowed");
+                "Error: negative or null values not allowed");
         }
     }
         
@@ -40,7 +36,7 @@ public class UrZokni {
     }
     
     public void setTisztasagPont(int tisztasagPont){ // Setter for the "tisztasagPont" int variable
-        if (tisztasagPont > 0){ // filtering negative numbers
+        if (tisztasagPont > 0){ // filtering negative values
             this.tisztasagPont = tisztasagPont;
         }
     }
