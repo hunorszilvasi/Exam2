@@ -18,7 +18,13 @@ public class UrZokni {
     }
         
     public void mosas(int pluszPont) {
-        tisztasagPont += pluszPont;
+        if(pluszPont >= 0){ // filtering negative numbers
+            tisztasagPont += pluszPont;
+        }
+        else{
+            throw new IllegalArgumentException(
+                "Error: negative or null numbers not allowed");
+        }
     }
         
     public int getTisztasagPont() {
@@ -29,7 +35,13 @@ public class UrZokni {
         return azonosito + ": " + tisztasagPont;
     }
     
-    public String getAzonosito(){ // Getter for the "azonosito" variable string
+    public String getAzonosito(){ // Getter for the "azonosito" string variable
         return azonosito;
+    }
+    
+    public void setTisztasagPont(int tisztasagPont){ // Setter for the "tisztasagPont" int variable
+        if (tisztasagPont > 0){ // filtering negative numbers
+            this.tisztasagPont = tisztasagPont;
+        }
     }
 }
