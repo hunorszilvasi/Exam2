@@ -9,11 +9,11 @@ package com.mycompany.exam2oop;
  * @author hunorszilvasi
  */
 public class UrZokni {
-    public String azonosito;
+    private String azonosito; // private type needed for data hiding
     private int tisztasagPont;
     
     public UrZokni(String azonosito, int tisztasagPont) {
-        this.azonosito = azonosito; // this.azonosito szukseges a helyes adattarolashoz
+        this.azonosito = azonosito; // this.azonosito needed for storing the data correctly
         this.tisztasagPont = tisztasagPont;
     }
         
@@ -24,7 +24,12 @@ public class UrZokni {
     public int getTisztasagPont() {
         return tisztasagPont;
     }
+    
     public String cimke() {
         return azonosito + ": " + tisztasagPont;
+    }
+    
+    public String getAzonosito(){ // Getter for the "azonosito" variable string
+        return azonosito;
     }
 }
