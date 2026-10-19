@@ -9,6 +9,13 @@ public class UrZokni {
     private int tisztasagPont;
     
     public UrZokni(String azonosito, int tisztasagPont) {
+        if (azonosito == null || azonosito.isEmpty()) {
+            throw new IllegalArgumentException("Identifier cannot be null or empty");
+        }
+
+        if (tisztasagPont < 0) {
+            throw new IllegalArgumentException("Cleanliness points cannot be negative");
+        }
         this.azonosito = azonosito; // this.azonosito needed for storing the data correctly
         this.tisztasagPont = tisztasagPont;
     }

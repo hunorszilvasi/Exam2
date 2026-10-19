@@ -16,6 +16,7 @@ public class Exam2OOP {
         System.out.println(z.cimke());
         
         UrZokni z2 = new UrZokni("ZOKNI-1", 4); // default version
+        z2.mosas(5);
         System.out.println(z2.cimke());
         
         // #5 exercise
