@@ -31,7 +31,7 @@ public class UrZokni {
         return tisztasagPont;
     }
     
-    public String cimke() {
+    public String cimke() { // default version with "azonosito" and "tisztasagPont"
         return azonosito + ": " + tisztasagPont;
     }
     
